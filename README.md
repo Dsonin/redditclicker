@@ -1,0 +1,2 @@
+# redditclicker
+Practice Idle Game
