@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reddit Game</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/reddit.css" rel="stylesheet">
+    <!-- to create a new HTML proprietary tag <script>document.createElement("newElement")</script>--> <!-- this is for IE only -->
+    <!--Keep this as a comment! It's for IE!--> <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+    <!-- New tags can be created here
+    <style>
+      tagName{
+        Attributes;
+      }
+    </style> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <h1 class="center">Reddit Clicker</h1>
+    </header>
+      <main class="container">
+        <p>Click for Karma !</p>
+        <section id="game">
+          <div class="row">
+            <div class="col-xs-4" id="clickers">
+              <h2>Let's get some sweet sweet karma!</h2>
+              <button class="game-btn" id="drink">Have an Energy Drink</button>
+              <button class="game-btn" id="lurk">Lurk</button> <!--Need to lurk to post anything. Gives inspiration. -->
+              <button class="game-btn" id="vote">Vote</button> <!-- Builds your ability to post faster. Requires inspiration. -->
+              <button class="game-btn" id="post">Post OC</button> <!-- Real karma the good stuff. Amount of karma depends on reputation -->
+              <button class="game-btn">Repost</button> <!-- Chance of failing proportinal to reputation, but bigger rewards. Potential to hurt your rep. -->
+              <button class="game-btn" id="subscribe">Subscribe to a sub</button>
+            </div>
+            <div class="col-xs-5" id="info">
+              <div id="msg-area">
+                <h2>Energy Drink Effect: <span id="energyDrinkTimer">0</span></h2>
+                <p id="alert-msg"></p>
+                <h2>Your Comments!</h2>
+                <input type="text" value="Type your message here!" name="comment-post" id="comment-field"><button class="game-btn" id="comment">Comment</button> <!-- Will give a litte bit of street credit. Requires a bit of inspiration. -->
+                <div id="userPosts"></div>
+              </div>
+            </div>
+            <div class="col-xs-3" id="stats">
+            <table align="right">
+              <thead>
+                <tr>
+                  <th colspan="0">Your Stats</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Attention</td>
+                  <td> <span id="boredom"></span></td>
+                </tr>
+                <tr>
+                  <td>Inspiration</td>
+                  <td><span id="inspo" class="text-right"></span></td>
+                </tr>
+                <tr>
+                  <td>Karma</td>
+                  <td><span id="karma" class="text-right"></span></td>
+                </tr>
+                <tr>
+                  <td>Posts</td>
+                  <td><span id="posts" class="text-right"></span></td>
+                </tr>
+                <tr>
+                  <td>Comments</td>
+                  <td><span id="cmts" class="text-right"></span></td>
+                </tr>
+                <tr>
+                  <td>/r/Subs</td>
+                  <td><span id="subreddits"></span>
+                </tr>
+                <tr>
+                  <td>Street Cred</td>
+                  <td><span id="credit" class="text-right"></span></td>
+                </tr>
+                <tr>
+                  <td>Bots</td>
+                  <td><span id="bots" class="text-right"></span></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    <footer>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/reddit.js"></script>
+  </body>
+</html>
